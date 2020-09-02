@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"go-web/pkg/setting"
+	"go-web/routers"
 	"net/http"
 )
 
 func main() {
-	router := gin.Default()
+	/*router := gin.Default()
 	router.GET("/test", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "test",
@@ -23,10 +23,9 @@ func main() {
 		MaxHeaderBytes: 1 << 20,
 	}
 
-	s.ListenAndServe()
-}
+	s.ListenAndServe()*/
 
-/*	router := routers.InitRouter()
+	router := routers.InitRouter()
 	s := &http.Server{
 		Addr:           fmt.Sprintf(":%d", setting.HTTPPort),
 		Handler:        router,
@@ -35,7 +34,8 @@ func main() {
 		MaxHeaderBytes: 1 << 20,
 	}
 
-	s.ListenAndServe()*/
+	s.ListenAndServe()
+}
 
 //r := gin.New()
 //r.GET("/get", func(c *gin.Context) {
